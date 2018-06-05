@@ -1,6 +1,288 @@
 <!-- SHEET WORKERS START-------------------------------------------------------- SHEET WORKERS START -->
 
 <script type="text/worker">
+//TOTAL POWER CALCULATION
+
+on(" change:logos1_power_A_tag change:logos1_power_B_tag change:logos1_power_C_tag change:logos1_power_D_tag change:logos1_power_E_tag change:logos1_power_F_tag change:logos1_power_G_tag change:logos1_power_H_tag change:logos1_power_I_tag change:logos1_power_J_tag change:logos1_power_K_tag change:logos1_weak_A_tag change:logos1_weak_B_tag change:logos1_weak_C_tag change:logos1_weak_D_tag change:logos2_power_A_tag change:logos2_power_B_tag change:logos2_power_C_tag change:logos2_power_D_tag change:logos2_power_E_tag change:logos2_power_F_tag change:logos2_power_G_tag change:logos2_power_H_tag change:logos2_power_I_tag change:logos2_power_J_tag change:logos2_power_K_tag change:logos2_weak_A_tag change:logos2_weak_B_tag change:logos2_weak_C_tag change:logos2_weak_D_tag change:logos3_power_A_tag change:logos3_power_B_tag change:logos3_power_C_tag change:logos3_power_D_tag change:logos3_power_E_tag change:logos3_power_F_tag change:logos3_power_G_tag change:logos3_power_H_tag change:logos3_power_I_tag change:logos3_power_J_tag change:logos3_power_K_tag change:logos3_weak_A_tag change:logos3_weak_B_tag change:logos3_weak_C_tag change:logos3_weak_D_tag change:logos4_power_A_tag change:logos4_power_B_tag change:logos4_power_C_tag change:logos4_power_D_tag change:logos4_power_E_tag change:logos4_power_F_tag change:logos4_power_G_tag change:logos4_power_H_tag change:logos4_power_I_tag change:logos4_power_J_tag change:logos4_power_K_tag change:logos4_weak_A_tag change:logos4_weak_B_tag change:logos4_weak_C_tag change:logos4_weak_D_tag change:mythos1_power_A_tag change:mythos1_power_B_tag change:mythos1_power_C_tag change:mythos1_power_D_tag change:mythos1_power_E_tag change:mythos1_power_F_tag change:mythos1_power_G_tag change:mythos1_power_H_tag change:mythos1_power_I_tag change:mythos1_power_J_tag change:mythos1_power_K_tag change:mythos1_weak_A_tag change:mythos1_weak_B_tag change:mythos1_weak_C_tag change:mythos1_weak_D_tag change:mythos2_power_A_tag change:mythos2_power_B_tag change:mythos2_power_C_tag change:mythos2_power_D_tag change:mythos2_power_E_tag change:mythos2_power_F_tag change:mythos2_power_G_tag change:mythos2_power_H_tag change:mythos2_power_I_tag change:mythos2_power_J_tag change:mythos2_power_K_tag change:mythos2_weak_A_tag change:mythos2_weak_B_tag change:mythos2_weak_C_tag change:mythos2_weak_D_tag change:mythos3_power_A_tag change:mythos3_power_B_tag change:mythos3_power_C_tag change:mythos3_power_D_tag change:mythos3_power_E_tag change:mythos3_power_F_tag change:mythos3_power_G_tag change:mythos3_power_H_tag change:mythos3_power_I_tag change:mythos3_power_J_tag change:mythos3_power_K_tag change:mythos3_weak_A_tag change:mythos3_weak_B_tag change:mythos3_weak_C_tag change:mythos3_weak_D_tag change:mythos4_power_A_tag change:mythos4_power_B_tag change:mythos4_power_C_tag change:mythos4_power_D_tag change:mythos4_power_E_tag change:mythos4_power_F_tag change:mythos4_power_G_tag change:mythos4_power_H_tag change:mythos4_power_I_tag change:mythos4_power_J_tag change:mythos4_power_K_tag change:mythos4_weak_A_tag change:mythos4_weak_B_tag change:mythos4_weak_C_tag change:mythos4_weak_D_tag change:extra1_power_A_tag change:extra1_power_B_tag change:extra1_power_C_tag change:extra1_power_D_tag change:extra1_power_E_tag change:extra1_power_F_tag change:extra1_power_G_tag change:extra1_power_H_tag change:extra1_power_I_tag change:extra1_power_J_tag change:extra1_power_K_tag change:extra1_weak_A_tag change:extra1_weak_B_tag change:extra1_weak_C_tag change:extra1_weak_D_tag change:extra2_power_A_tag change:extra2_power_B_tag change:extra2_power_C_tag change:extra2_power_D_tag change:extra2_power_E_tag change:extra2_power_F_tag change:extra2_power_G_tag change:extra2_power_H_tag change:extra2_power_I_tag change:extra2_power_J_tag change:extra2_power_K_tag change:extra2_weak_A_tag change:extra2_weak_B_tag change:extra2_weak_C_tag change:extra2_weak_D_tag change:extra3_power_A_tag change:extra3_power_B_tag change:extra3_power_C_tag change:extra3_power_D_tag change:extra3_power_E_tag change:extra3_power_F_tag change:extra3_power_G_tag change:extra3_power_H_tag change:extra3_power_I_tag change:extra3_power_J_tag change:extra3_power_K_tag change:extra3_weak_A_tag change:extra3_weak_B_tag change:extra3_weak_C_tag change:extra3_weak_D_tag change:crew_power_A_tag change:crew_power_B_tag change:crew_power_C_tag change:crew_power_D_tag change:crew_power_E_tag change:crew_power_F_tag change:crew_power_G_tag change:crew_power_H_tag change:crew_power_I_tag change:crew_power_J_tag change:crew_power_K_tag change:crew_weak_A_tag change:crew_weak_B_tag change:crew_weak_C_tag change:crew_weak_D_tag change:identity_story_A_tag change:identity_story_B_tag change:identity_story_C_tag change:identity_story_D_tag change:identity_story_E_tag change:identity_story_F_tag change:plusmod change:minusmod change:status_1_switch change:status_1_tier change:status_2_switch change:status_2_tier change:status_3_switch change:status_3_tier change:status_4_switch change:status_4_tier change:status_5_switch change:status_5_tier change:status_6_switch change:status_6_tier change:status_7_switch change:status_7_tier change:status_8_switch change:status_8_tier change:clear", function() {
+getAttrs([
+"logos1_power_A_tag", "logos1_power_B_tag", "logos1_power_C_tag", "logos1_power_D_tag", "logos1_power_E_tag", "logos1_power_F_tag", "logos1_power_G_tag", "logos1_power_H_tag", "logos1_power_I_tag", "logos1_power_J_tag", "logos1_power_K_tag", "logos1_weak_A_tag", "logos1_weak_B_tag", "logos1_weak_C_tag", "logos1_weak_D_tag",
+"logos2_power_A_tag", "logos2_power_B_tag", "logos2_power_C_tag", "logos2_power_D_tag", "logos2_power_E_tag", "logos2_power_F_tag", "logos2_power_G_tag", "logos2_power_H_tag", "logos2_power_I_tag", "logos2_power_J_tag", "logos2_power_K_tag", "logos2_weak_A_tag", "logos2_weak_B_tag", "logos2_weak_C_tag", "logos2_weak_D_tag",
+"logos3_power_A_tag", "logos3_power_B_tag", "logos3_power_C_tag", "logos3_power_D_tag", "logos3_power_E_tag", "logos3_power_F_tag", "logos3_power_G_tag", "logos3_power_H_tag", "logos3_power_I_tag", "logos3_power_J_tag", "logos3_power_K_tag", "logos3_weak_A_tag", "logos3_weak_B_tag", "logos3_weak_C_tag", "logos3_weak_D_tag",
+"logos4_power_A_tag", "logos4_power_B_tag", "logos4_power_C_tag", "logos4_power_D_tag", "logos4_power_E_tag", "logos4_power_F_tag", "logos4_power_G_tag", "logos4_power_H_tag", "logos4_power_I_tag", "logos4_power_J_tag", "logos4_power_K_tag", "logos4_weak_A_tag", "logos4_weak_B_tag", "logos4_weak_C_tag", "logos4_weak_D_tag",
+
+"mythos1_power_A_tag", "mythos1_power_B_tag", "mythos1_power_C_tag", "mythos1_power_D_tag", "mythos1_power_E_tag", "mythos1_power_F_tag", "mythos1_power_G_tag", "mythos1_power_H_tag", "mythos1_power_I_tag", "mythos1_power_J_tag", "mythos1_power_K_tag", "mythos1_weak_A_tag", "mythos1_weak_B_tag", "mythos1_weak_C_tag", "mythos1_weak_D_tag",
+"mythos2_power_A_tag", "mythos2_power_B_tag", "mythos2_power_C_tag", "mythos2_power_D_tag", "mythos2_power_E_tag", "mythos2_power_F_tag", "mythos2_power_G_tag", "mythos2_power_H_tag", "mythos2_power_I_tag", "mythos2_power_J_tag", "mythos2_power_K_tag", "mythos2_weak_A_tag", "mythos2_weak_B_tag", "mythos2_weak_C_tag", "mythos2_weak_D_tag",
+"mythos3_power_A_tag", "mythos3_power_B_tag", "mythos3_power_C_tag", "mythos3_power_D_tag", "mythos3_power_E_tag", "mythos3_power_F_tag", "mythos3_power_G_tag", "mythos3_power_H_tag", "mythos3_power_I_tag", "mythos3_power_J_tag", "mythos3_power_K_tag", "mythos3_weak_A_tag", "mythos3_weak_B_tag", "mythos3_weak_C_tag", "mythos3_weak_D_tag",
+"mythos4_power_A_tag", "mythos4_power_B_tag", "mythos4_power_C_tag", "mythos4_power_D_tag", "mythos4_power_E_tag", "mythos4_power_F_tag", "mythos4_power_G_tag", "mythos4_power_H_tag", "mythos4_power_I_tag", "mythos4_power_J_tag", "mythos4_power_K_tag", "mythos4_weak_A_tag", "mythos4_weak_B_tag", "mythos4_weak_C_tag", "mythos4_weak_D_tag",
+
+"extra1_power_A_tag", "extra1_power_B_tag", "extra1_power_C_tag", "extra1_power_D_tag", "extra1_power_E_tag", "extra1_power_F_tag", "extra1_power_G_tag", "extra1_power_H_tag", "extra1_power_I_tag", "extra1_power_J_tag", "extra1_power_K_tag", "extra1_weak_A_tag", "extra1_weak_B_tag", "extra1_weak_C_tag", "extra1_weak_D_tag",
+"extra2_power_A_tag", "extra2_power_B_tag", "extra2_power_C_tag", "extra2_power_D_tag", "extra2_power_E_tag", "extra2_power_F_tag", "extra2_power_G_tag", "extra2_power_H_tag", "extra2_power_I_tag", "extra2_power_J_tag", "extra2_power_K_tag", "extra2_weak_A_tag", "extra2_weak_B_tag", "extra2_weak_C_tag", "extra2_weak_D_tag",
+"extra3_power_A_tag", "extra3_power_B_tag", "extra3_power_C_tag", "extra3_power_D_tag", "extra3_power_E_tag", "extra3_power_F_tag", "extra3_power_G_tag", "extra3_power_H_tag", "extra3_power_I_tag", "extra3_power_J_tag", "extra3_power_K_tag", "extra3_weak_A_tag", "extra3_weak_B_tag", "extra3_weak_C_tag", "extra3_weak_D_tag",
+
+"crew_power_A_tag", "crew_power_B_tag", "crew_power_C_tag", "crew_power_D_tag", "crew_power_E_tag", "crew_power_F_tag", "crew_power_G_tag", "crew_power_H_tag", "crew_power_I_tag", "crew_power_J_tag", "crew_power_K_tag", "crew_weak_A_tag", "crew_weak_B_tag", "crew_weak_C_tag", "crew_weak_D_tag",
+
+"identity_story_A_tag", "identity_story_B_tag", "identity_story_C_tag", "identity_story_D_tag", "identity_story_E_tag", "identity_story_F_tag",
+
+"plusmod", "minusmod",
+"status_1_switch", "status_1_tier", "status_2_switch", "status_2_tier", "status_3_switch", "status_3_tier", "status_4_switch", "status_4_tier", "status_5_switch", "status_5_tier", "status_6_switch", "status_6_tier", "status_7_switch", "status_7_tier", "status_8_switch", "status_8_tier"
+	
+], function(v) {
+	let logos1PA = parseInt(v.logos1_power_A_tag) || 0;
+	let logos1PB = parseInt(v.logos1_power_B_tag) || 0;
+	let logos1PC = parseInt(v.logos1_power_C_tag) || 0;
+	let logos1PD = parseInt(v.logos1_power_D_tag) || 0;
+	let logos1PE = parseInt(v.logos1_power_E_tag) || 0;
+	let logos1PF = parseInt(v.logos1_power_F_tag) || 0;
+	let logos1PG = parseInt(v.logos1_power_G_tag) || 0;
+	let logos1PH = parseInt(v.logos1_power_H_tag) || 0;
+	let logos1PI = parseInt(v.logos1_power_I_tag) || 0;
+	let logos1PJ = parseInt(v.logos1_power_J_tag) || 0;
+	let logos1PK = parseInt(v.logos1_power_K_tag) || 0;
+	let logos1WA = parseInt(v.logos1_weak_A_tag) || 0;
+	let logos1WB = parseInt(v.logos1_weak_B_tag) || 0;
+	let logos1WC = parseInt(v.logos1_weak_C_tag) || 0;
+	let logos1WD = parseInt(v.logos1_weak_D_tag) || 0;
+	let logos1Total = (logos1PA + logos1PB + logos1PC + logos1PD + logos1PE + logos1PF + logos1PG + logos1PH + logos1PI + logos1PJ + logos1PK - logos1WA - logos1WB - logos1WC - logos1WD);
+	
+	let logos2PA = parseInt(v.logos2_power_A_tag) || 0;
+	let logos2PB = parseInt(v.logos2_power_B_tag) || 0;
+	let logos2PC = parseInt(v.logos2_power_C_tag) || 0;
+	let logos2PD = parseInt(v.logos2_power_D_tag) || 0;
+	let logos2PE = parseInt(v.logos2_power_E_tag) || 0;
+	let logos2PF = parseInt(v.logos2_power_F_tag) || 0;
+	let logos2PG = parseInt(v.logos2_power_G_tag) || 0;
+	let logos2PH = parseInt(v.logos2_power_H_tag) || 0;
+	let logos2PI = parseInt(v.logos2_power_I_tag) || 0;
+	let logos2PJ = parseInt(v.logos2_power_J_tag) || 0;
+	let logos2PK = parseInt(v.logos2_power_K_tag) || 0;
+	let logos2WA = parseInt(v.logos2_weak_A_tag) || 0;
+	let logos2WB = parseInt(v.logos2_weak_B_tag) || 0;
+	let logos2WC = parseInt(v.logos2_weak_C_tag) || 0;
+	let logos2WD = parseInt(v.logos2_weak_D_tag) || 0;
+	let logos2Total = (logos2PA + logos2PB + logos2PC + logos2PD + logos2PE + logos2PF + logos2PG + logos2PH + logos2PI + logos2PJ + logos2PK - logos2WA - logos2WB - logos2WC - logos2WD);
+
+	let logos3PA = parseInt(v.logos3_power_A_tag) || 0;
+	let logos3PB = parseInt(v.logos3_power_B_tag) || 0;
+	let logos3PC = parseInt(v.logos3_power_C_tag) || 0;
+	let logos3PD = parseInt(v.logos3_power_D_tag) || 0;
+	let logos3PE = parseInt(v.logos3_power_E_tag) || 0;
+	let logos3PF = parseInt(v.logos3_power_F_tag) || 0;
+	let logos3PG = parseInt(v.logos3_power_G_tag) || 0;
+	let logos3PH = parseInt(v.logos3_power_H_tag) || 0;
+	let logos3PI = parseInt(v.logos3_power_I_tag) || 0;
+	let logos3PJ = parseInt(v.logos3_power_J_tag) || 0;
+	let logos3PK = parseInt(v.logos3_power_K_tag) || 0;
+	let logos3WA = parseInt(v.logos3_weak_A_tag) || 0;
+	let logos3WB = parseInt(v.logos3_weak_B_tag) || 0;
+	let logos3WC = parseInt(v.logos3_weak_C_tag) || 0;
+	let logos3WD = parseInt(v.logos3_weak_D_tag) || 0;
+	let logos3Total = (logos3PA + logos3PB + logos3PC + logos3PD + logos3PE + logos3PF + logos3PG + logos3PH + logos3PI + logos3PJ + logos3PK - logos3WA - logos3WB - logos3WC - logos3WD);
+
+	let logos4PA = parseInt(v.logos4_power_A_tag) || 0;
+	let logos4PB = parseInt(v.logos4_power_B_tag) || 0;
+	let logos4PC = parseInt(v.logos4_power_C_tag) || 0;
+	let logos4PD = parseInt(v.logos4_power_D_tag) || 0;
+	let logos4PE = parseInt(v.logos4_power_E_tag) || 0;
+	let logos4PF = parseInt(v.logos4_power_F_tag) || 0;
+	let logos4PG = parseInt(v.logos4_power_G_tag) || 0;
+	let logos4PH = parseInt(v.logos4_power_H_tag) || 0;
+	let logos4PI = parseInt(v.logos4_power_I_tag) || 0;
+	let logos4PJ = parseInt(v.logos4_power_J_tag) || 0;
+	let logos4PK = parseInt(v.logos4_power_K_tag) || 0;
+	let logos4WA = parseInt(v.logos4_weak_A_tag) || 0;
+	let logos4WB = parseInt(v.logos4_weak_B_tag) || 0;
+	let logos4WC = parseInt(v.logos4_weak_C_tag) || 0;
+	let logos4WD = parseInt(v.logos4_weak_D_tag) || 0;
+	let logos4Total = (logos4PA + logos4PB + logos4PC + logos4PD + logos4PE + logos4PF + logos4PG + logos4PH + logos4PI + logos4PJ + logos4PK - logos4WA - logos4WB - logos4WC - logos4WD);
+
+	let mythos1PA = parseInt(v.mythos1_power_A_tag) || 0;
+	let mythos1PB = parseInt(v.mythos1_power_B_tag) || 0;
+	let mythos1PC = parseInt(v.mythos1_power_C_tag) || 0;
+	let mythos1PD = parseInt(v.mythos1_power_D_tag) || 0;
+	let mythos1PE = parseInt(v.mythos1_power_E_tag) || 0;
+	let mythos1PF = parseInt(v.mythos1_power_F_tag) || 0;
+	let mythos1PG = parseInt(v.mythos1_power_G_tag) || 0;
+	let mythos1PH = parseInt(v.mythos1_power_H_tag) || 0;
+	let mythos1PI = parseInt(v.mythos1_power_I_tag) || 0;
+	let mythos1PJ = parseInt(v.mythos1_power_J_tag) || 0;
+	let mythos1PK = parseInt(v.mythos1_power_K_tag) || 0;
+	let mythos1WA = parseInt(v.mythos1_weak_A_tag) || 0;
+	let mythos1WB = parseInt(v.mythos1_weak_B_tag) || 0;
+	let mythos1WC = parseInt(v.mythos1_weak_C_tag) || 0;
+	let mythos1WD = parseInt(v.mythos1_weak_D_tag) || 0;
+	let mythos1Total = (mythos1PA + mythos1PB + mythos1PC + mythos1PD + mythos1PE + mythos1PF + mythos1PG + mythos1PH + mythos1PI + mythos1PJ + mythos1PK - mythos1WA - mythos1WB - mythos1WC - mythos1WD);
+
+	let mythos2PA = parseInt(v.mythos2_power_A_tag) || 0;
+	let mythos2PB = parseInt(v.mythos2_power_B_tag) || 0;
+	let mythos2PC = parseInt(v.mythos2_power_C_tag) || 0;
+	let mythos2PD = parseInt(v.mythos2_power_D_tag) || 0;
+	let mythos2PE = parseInt(v.mythos2_power_E_tag) || 0;
+	let mythos2PF = parseInt(v.mythos2_power_F_tag) || 0;
+	let mythos2PG = parseInt(v.mythos2_power_G_tag) || 0;
+	let mythos2PH = parseInt(v.mythos2_power_H_tag) || 0;
+	let mythos2PI = parseInt(v.mythos2_power_I_tag) || 0;
+	let mythos2PJ = parseInt(v.mythos2_power_J_tag) || 0;
+	let mythos2PK = parseInt(v.mythos2_power_K_tag) || 0;
+	let mythos2WA = parseInt(v.mythos2_weak_A_tag) || 0;
+	let mythos2WB = parseInt(v.mythos2_weak_B_tag) || 0;
+	let mythos2WC = parseInt(v.mythos2_weak_C_tag) || 0;
+	let mythos2WD = parseInt(v.mythos2_weak_D_tag) || 0;
+	let mythos2Total = (mythos2PA + mythos2PB + mythos2PC + mythos2PD + mythos2PE + mythos2PF + mythos2PG + mythos2PH + mythos2PI + mythos2PJ + mythos2PK - mythos2WA - mythos2WB - mythos2WC - mythos2WD);
+
+	let mythos3PA = parseInt(v.mythos3_power_A_tag) || 0;
+	let mythos3PB = parseInt(v.mythos3_power_B_tag) || 0;
+	let mythos3PC = parseInt(v.mythos3_power_C_tag) || 0;
+	let mythos3PD = parseInt(v.mythos3_power_D_tag) || 0;
+	let mythos3PE = parseInt(v.mythos3_power_E_tag) || 0;
+	let mythos3PF = parseInt(v.mythos3_power_F_tag) || 0;
+	let mythos3PG = parseInt(v.mythos3_power_G_tag) || 0;
+	let mythos3PH = parseInt(v.mythos3_power_H_tag) || 0;
+	let mythos3PI = parseInt(v.mythos3_power_I_tag) || 0;
+	let mythos3PJ = parseInt(v.mythos3_power_J_tag) || 0;
+	let mythos3PK = parseInt(v.mythos3_power_K_tag) || 0;
+	let mythos3WA = parseInt(v.mythos3_weak_A_tag) || 0;
+	let mythos3WB = parseInt(v.mythos3_weak_B_tag) || 0;
+	let mythos3WC = parseInt(v.mythos3_weak_C_tag) || 0;
+	let mythos3WD = parseInt(v.mythos3_weak_D_tag) || 0;
+	let mythos3Total = (mythos3PA + mythos3PB + mythos3PC + mythos3PD + mythos3PE + mythos3PF + mythos3PG + mythos3PH + mythos3PI + mythos3PJ + mythos3PK - mythos3WA - mythos3WB - mythos3WC - mythos3WD);
+
+	let mythos4PA = parseInt(v.mythos4_power_A_tag) || 0;
+	let mythos4PB = parseInt(v.mythos4_power_B_tag) || 0;
+	let mythos4PC = parseInt(v.mythos4_power_C_tag) || 0;
+	let mythos4PD = parseInt(v.mythos4_power_D_tag) || 0;
+	let mythos4PE = parseInt(v.mythos4_power_E_tag) || 0;
+	let mythos4PF = parseInt(v.mythos4_power_F_tag) || 0;
+	let mythos4PG = parseInt(v.mythos4_power_G_tag) || 0;
+	let mythos4PH = parseInt(v.mythos4_power_H_tag) || 0;
+	let mythos4PI = parseInt(v.mythos4_power_I_tag) || 0;
+	let mythos4PJ = parseInt(v.mythos4_power_J_tag) || 0;
+	let mythos4PK = parseInt(v.mythos4_power_K_tag) || 0;
+	let mythos4WA = parseInt(v.mythos4_weak_A_tag) || 0;
+	let mythos4WB = parseInt(v.mythos4_weak_B_tag) || 0;
+	let mythos4WC = parseInt(v.mythos4_weak_C_tag) || 0;
+	let mythos4WD = parseInt(v.mythos4_weak_D_tag) || 0;
+	let mythos4Total = (mythos4PA + mythos4PB + mythos4PC + mythos4PD + mythos4PE + mythos4PF + mythos4PG + mythos4PH + mythos4PI + mythos4PJ + mythos4PK - mythos4WA - mythos4WB - mythos4WC - mythos4WD);
+
+	let extra1PA = parseInt(v.extra1_power_A_tag) || 0;
+	let extra1PB = parseInt(v.extra1_power_B_tag) || 0;
+	let extra1PC = parseInt(v.extra1_power_C_tag) || 0;
+	let extra1PD = parseInt(v.extra1_power_D_tag) || 0;
+	let extra1PE = parseInt(v.extra1_power_E_tag) || 0;
+	let extra1PF = parseInt(v.extra1_power_F_tag) || 0;
+	let extra1PG = parseInt(v.extra1_power_G_tag) || 0;
+	let extra1PH = parseInt(v.extra1_power_H_tag) || 0;
+	let extra1PI = parseInt(v.extra1_power_I_tag) || 0;
+	let extra1PJ = parseInt(v.extra1_power_J_tag) || 0;
+	let extra1PK = parseInt(v.extra1_power_K_tag) || 0;
+	let extra1WA = parseInt(v.extra1_weak_A_tag) || 0;
+	let extra1WB = parseInt(v.extra1_weak_B_tag) || 0;
+	let extra1WC = parseInt(v.extra1_weak_C_tag) || 0;
+	let extra1WD = parseInt(v.extra1_weak_D_tag) || 0;
+	let extra1Total = (extra1PA + extra1PB + extra1PC + extra1PD + extra1PE + extra1PF + extra1PG + extra1PH + extra1PI + extra1PJ + extra1PK - extra1WA - extra1WB - extra1WC - extra1WD);
+
+	let extra2PA = parseInt(v.extra2_power_A_tag) || 0;
+	let extra2PB = parseInt(v.extra2_power_B_tag) || 0;
+	let extra2PC = parseInt(v.extra2_power_C_tag) || 0;
+	let extra2PD = parseInt(v.extra2_power_D_tag) || 0;
+	let extra2PE = parseInt(v.extra2_power_E_tag) || 0;
+	let extra2PF = parseInt(v.extra2_power_F_tag) || 0;
+	let extra2PG = parseInt(v.extra2_power_G_tag) || 0;
+	let extra2PH = parseInt(v.extra2_power_H_tag) || 0;
+	let extra2PI = parseInt(v.extra2_power_I_tag) || 0;
+	let extra2PJ = parseInt(v.extra2_power_J_tag) || 0;
+	let extra2PK = parseInt(v.extra2_power_K_tag) || 0;
+	let extra2WA = parseInt(v.extra2_weak_A_tag) || 0;
+	let extra2WB = parseInt(v.extra2_weak_B_tag) || 0;
+	let extra2WC = parseInt(v.extra2_weak_C_tag) || 0;
+	let extra2WD = parseInt(v.extra2_weak_D_tag) || 0;
+	let extra2Total = (extra2PA + extra2PB + extra2PC + extra2PD + extra2PE + extra2PF + extra2PG + extra2PH + extra2PI + extra2PJ + extra2PK - extra2WA - extra2WB - extra2WC - extra2WD);
+
+	let extra3PA = parseInt(v.extra3_power_A_tag) || 0;
+	let extra3PB = parseInt(v.extra3_power_B_tag) || 0;
+	let extra3PC = parseInt(v.extra3_power_C_tag) || 0;
+	let extra3PD = parseInt(v.extra3_power_D_tag) || 0;
+	let extra3PE = parseInt(v.extra3_power_E_tag) || 0;
+	let extra3PF = parseInt(v.extra3_power_F_tag) || 0;
+	let extra3PG = parseInt(v.extra3_power_G_tag) || 0;
+	let extra3PH = parseInt(v.extra3_power_H_tag) || 0;
+	let extra3PI = parseInt(v.extra3_power_I_tag) || 0;
+	let extra3PJ = parseInt(v.extra3_power_J_tag) || 0;
+	let extra3PK = parseInt(v.extra3_power_K_tag) || 0;
+	let extra3WA = parseInt(v.extra3_weak_A_tag) || 0;
+	let extra3WB = parseInt(v.extra3_weak_B_tag) || 0;
+	let extra3WC = parseInt(v.extra3_weak_C_tag) || 0;
+	let extra3WD = parseInt(v.extra3_weak_D_tag) || 0;
+	let extra3Total = (extra3PA + extra3PB + extra3PC + extra3PD + extra3PE + extra3PF + extra3PG + extra3PH + extra3PI + extra3PJ + extra3PK - extra3WA - extra3WB - extra3WC - extra3WD);
+
+	let crewPA = parseInt(v.crew_power_A_tag) || 0;
+	let crewPB = parseInt(v.crew_power_B_tag) || 0;
+	let crewPC = parseInt(v.crew_power_C_tag) || 0;
+	let crewPD = parseInt(v.crew_power_D_tag) || 0;
+	let crewPE = parseInt(v.crew_power_E_tag) || 0;
+	let crewPF = parseInt(v.crew_power_F_tag) || 0;
+	let crewPG = parseInt(v.crew_power_G_tag) || 0;
+	let crewPH = parseInt(v.crew_power_H_tag) || 0;
+	let crewPI = parseInt(v.crew_power_I_tag) || 0;
+	let crewPJ = parseInt(v.crew_power_J_tag) || 0;
+	let crewPK = parseInt(v.crew_power_K_tag) || 0;
+	let crewWA = parseInt(v.crew_weak_A_tag) || 0;
+	let crewWB = parseInt(v.crew_weak_B_tag) || 0;
+	let crewWC = parseInt(v.crew_weak_C_tag) || 0;
+	let crewWD = parseInt(v.crew_weak_D_tag) || 0;
+	let crewTotal = (crewPA + crewPB + crewPC + crewPD + crewPE + crewPF + crewPG + crewPH + crewPI + crewPJ + crewPK - crewWA - crewWB - crewWC - crewWD);
+
+	let idntSA = parseInt(v.identity_story_A_tag) || 0;
+	let idntSB = parseInt(v.identity_story_B_tag) || 0;
+	let idntSC = parseInt(v.identity_story_C_tag) || 0;
+	let idntSD = parseInt(v.identity_story_D_tag) || 0;
+	let idntSE = parseInt(v.identity_story_E_tag) || 0;
+	let idntSF = parseInt(v.identity_story_F_tag) || 0;
+	let idntTotal = (idntSA + idntSB + idntSC + idntSD + idntSE + idntSF);
+
+	let modPLS = parseInt(v.plusmod) || 0;
+	let modMNS = parseInt(v.minusmod) || 0;
+	let modTotal = (modPLS - modMNS);
+
+	let stat1SW = parseInt(v.status_1_switch) || 0;
+	let stat2SW = parseInt(v.status_2_switch) || 0;
+	let stat3SW = parseInt(v.status_3_switch) || 0;
+	let stat4SW = parseInt(v.status_4_switch) || 0;
+	let stat5SW = parseInt(v.status_5_switch) || 0;
+	let stat6SW = parseInt(v.status_6_switch) || 0;
+	let stat7SW = parseInt(v.status_7_switch) || 0;
+	let stat8SW = parseInt(v.status_8_switch) || 0;
+
+	let stat1TR = parseInt(v.status_1_tier) || 0;
+	let stat2TR = parseInt(v.status_2_tier) || 0;
+	let stat3TR = parseInt(v.status_3_tier) || 0;
+	let stat4TR = parseInt(v.status_4_tier) || 0;
+	let stat5TR = parseInt(v.status_5_tier) || 0;
+	let stat6TR = parseInt(v.status_6_tier) || 0;
+	let stat7TR = parseInt(v.status_7_tier) || 0;
+	let stat8TR = parseInt(v.status_8_tier) || 0;
+	
+	let stat1Total = (stat1SW * stat1TR);
+	let stat2Total = (stat2SW * stat2TR);
+	let stat3Total = (stat3SW * stat3TR);
+	let stat4Total = (stat4SW * stat4TR);
+	let stat5Total = (stat5SW * stat5TR);
+	let stat6Total = (stat6SW * stat6TR);
+	let stat7Total = (stat7SW * stat7TR);
+	let stat8Total = (stat8SW * stat8TR);
+
+	let totalPower = (logos1Total + logos2Total + logos3Total + logos4Total + mythos1Total + mythos2Total + mythos3Total + mythos4Total + extra1Total + extra2Total + extra3Total + crewTotal + idntTotal + modTotal + stat1Total + stat2Total + stat3Total + stat4Total + stat5Total + stat6Total + stat7Total + stat8Total);
+	let totalBurn = (3 + modTotal + stat1Total + stat2Total + stat3Total + stat4Total + stat5Total + stat6Total + stat7Total + stat8Total);
+	
+	setAttrs({
+		"power": totalPower,
+		"power_burn": totalBurn,
+	});
+});
+});
+
+</script>
+
+<script type="text/worker">
 //CONVINCE Dynamite Trigger
 
 on(" change:logos1_power_A_tag change:logos1_power_B_tag change:logos1_power_C_tag change:logos1_power_D_tag change:logos1_power_E_tag change:logos1_power_F_tag change:logos1_power_G_tag change:logos1_power_H_tag change:logos1_power_I_tag change:logos1_power_J_tag change:logos1_power_K_tag change:logos1_weak_A_tag change:logos1_weak_B_tag change:logos1_weak_C_tag change:logos1_weak_D_tag change:logos1_convince_dynamite change:logos2_power_A_tag change:logos2_power_B_tag change:logos2_power_C_tag change:logos2_power_D_tag change:logos2_power_E_tag change:logos2_power_F_tag change:logos2_power_G_tag change:logos2_power_H_tag change:logos2_power_I_tag change:logos2_power_J_tag change:logos2_power_K_tag change:logos2_weak_A_tag change:logos2_weak_B_tag change:logos2_weak_C_tag change:logos2_weak_D_tag change:logos2_convince_dynamite change:logos3_power_A_tag change:logos3_power_B_tag change:logos3_power_C_tag change:logos3_power_D_tag change:logos3_power_E_tag change:logos3_power_F_tag change:logos3_power_G_tag change:logos3_power_H_tag change:logos3_power_I_tag change:logos3_power_J_tag change:logos3_power_K_tag change:logos3_weak_A_tag change:logos3_weak_B_tag change:logos3_weak_C_tag change:logos3_weak_D_tag change:logos3_convince_dynamite change:logos4_power_A_tag change:logos4_power_B_tag change:logos4_power_C_tag change:logos4_power_D_tag change:logos4_power_E_tag change:logos4_power_F_tag change:logos4_power_G_tag change:logos4_power_H_tag change:logos4_power_I_tag change:logos4_power_J_tag change:logos4_power_K_tag change:logos4_weak_A_tag change:logos4_weak_B_tag change:logos4_weak_C_tag change:logos4_weak_D_tag change:logos4_convince_dynamite  change:mythos1_power_A_tag change:mythos1_power_B_tag change:mythos1_power_C_tag change:mythos1_power_D_tag change:mythos1_power_E_tag change:mythos1_power_F_tag change:mythos1_power_G_tag change:mythos1_power_H_tag change:mythos1_power_I_tag change:mythos1_power_J_tag change:mythos1_power_K_tag change:mythos1_weak_A_tag change:mythos1_weak_B_tag change:mythos1_weak_C_tag change:mythos1_weak_D_tag change:mythos1_convince_dynamite change:mythos2_power_A_tag change:mythos2_power_B_tag change:mythos2_power_C_tag change:mythos2_power_D_tag change:mythos2_power_E_tag change:mythos2_power_F_tag change:mythos2_power_G_tag change:mythos2_power_H_tag change:mythos2_power_I_tag change:mythos2_power_J_tag change:mythos2_power_K_tag change:mythos2_weak_A_tag change:mythos2_weak_B_tag change:mythos2_weak_C_tag change:mythos2_weak_D_tag change:mythos2_convince_dynamite change:mythos3_power_A_tag change:mythos3_power_B_tag change:mythos3_power_C_tag change:mythos3_power_D_tag change:mythos3_power_E_tag change:mythos3_power_F_tag change:mythos3_power_G_tag change:mythos3_power_H_tag change:mythos3_power_I_tag change:mythos3_power_J_tag change:mythos3_power_K_tag change:mythos3_weak_A_tag change:mythos3_weak_B_tag change:mythos3_weak_C_tag change:mythos3_weak_D_tag change:mythos3_convince_dynamite change:mythos4_power_A_tag change:mythos4_power_B_tag change:mythos4_power_C_tag change:mythos4_power_D_tag change:mythos4_power_E_tag change:mythos4_power_F_tag change:mythos4_power_G_tag change:mythos4_power_H_tag change:mythos4_power_I_tag change:mythos4_power_J_tag change:mythos4_power_K_tag change:mythos4_weak_A_tag change:mythos4_weak_B_tag change:mythos4_weak_C_tag change:mythos4_weak_D_tag change:mythos4_convince_dynamite   change:logos1_whostheboss_convince_dynamite change:logos2_whostheboss_convince_dynamite change:logos3_whostheboss_convince_dynamite change:logos4_whostheboss_convince_dynamite  change:identity_story_whostheboss_tag  change:logos1_allinadayswork change:logos2_allinadayswork change:logos3_allinadayswork change:logos4_allinadayswork  change:identity_story_allinadayswork_tag  change:logos1_power_A_qualitymatters change:logos1_power_B_qualitymatters change:logos1_power_C_qualitymatters change:logos1_power_D_qualitymatters change:logos1_power_E_qualitymatters change:logos1_power_F_qualitymatters change:logos1_power_G_qualitymatters change:logos1_power_H_qualitymatters change:logos1_power_I_qualitymatters change:logos1_power_J_qualitymatters change:logos1_power_K_qualitymatters change:logos1_qualitymatters change:logos2_power_A_qualitymatters change:logos2_power_B_qualitymatters change:logos2_power_C_qualitymatters change:logos2_power_D_qualitymatters change:logos2_power_E_qualitymatters change:logos2_power_F_qualitymatters change:logos2_power_G_qualitymatters change:logos2_power_H_qualitymatters change:logos2_power_I_qualitymatters change:logos2_power_J_qualitymatters change:logos2_power_K_qualitymatters change:logos2_qualitymatters change:logos3_power_A_qualitymatters change:logos3_power_B_qualitymatters change:logos3_power_C_qualitymatters change:logos3_power_D_qualitymatters change:logos3_power_E_qualitymatters change:logos3_power_F_qualitymatters change:logos3_power_G_qualitymatters change:logos3_power_H_qualitymatters change:logos3_power_I_qualitymatters change:logos3_power_J_qualitymatters change:logos3_power_K_qualitymatters change:logos3_qualitymatters change:logos4_power_A_qualitymatters change:logos4_power_B_qualitymatters change:logos4_power_C_qualitymatters change:logos4_power_D_qualitymatters change:logos4_power_E_qualitymatters change:logos4_power_F_qualitymatters change:logos4_power_G_qualitymatters change:logos4_power_H_qualitymatters change:logos4_power_I_qualitymatters change:logos4_power_J_qualitymatters change:logos4_power_K_qualitymatters change:logos4_qualitymatters change:identity_story_followme_tag change:identity_story_oblivious_tag change:identity1_convince_dynamite change:identity2_convince_dynamite change:identity3_convince_dynamite change:extra1_power_A_tag change:extra1_power_B_tag change:extra1_power_C_tag change:extra1_power_D_tag change:extra1_power_E_tag change:extra1_power_F_tag change:extra1_power_G_tag change:extra1_power_H_tag change:extra1_power_I_tag change:extra1_power_J_tag change:extra1_power_K_tag change:extra1_weak_A_tag change:extra1_weak_B_tag change:extra1_weak_C_tag change:extra1_weak_D_tag change:extra2_power_A_tag change:extra2_power_B_tag change:extra2_power_C_tag change:extra2_power_D_tag change:extra2_power_E_tag change:extra2_power_F_tag change:extra2_power_G_tag change:extra2_power_H_tag change:extra2_power_I_tag change:extra2_power_J_tag change:extra2_power_K_tag change:extra2_weak_A_tag change:extra2_weak_B_tag change:extra2_weak_C_tag change:extra2_weak_D_tag change:extra3_power_A_tag change:extra3_power_B_tag change:extra3_power_C_tag change:extra3_power_D_tag change:extra3_power_E_tag change:extra3_power_F_tag change:extra3_power_G_tag change:extra3_power_H_tag change:extra3_power_I_tag change:extra3_power_J_tag change:extra3_power_K_tag change:extra3_weak_A_tag change:extra3_weak_B_tag change:extra3_weak_C_tag change:extra3_weak_D_tag change:extra1_convince_dynamite change:extra2_convince_dynamite change:extra3_convince_dynamite change:dynamite_all ", function() {
@@ -5803,8 +6085,8 @@ setAttrs(settings);
                     <input type="number" name="attr_minusmod" value ="0" min='0' style="width: 80px;">
                     <label>POWER</label>
                     <input type="checkbox" class="burn_roll_switch hidden"name="attr_burn_roll" value="1">
-                    <input type="number" class="standard_roll_body" name="attr_power" value='[[ @{logos1_power_A_tag} + @{logos1_power_B_tag} + @{logos1_power_C_tag} + @{logos1_power_D_tag} + @{logos1_power_E_tag} + @{logos1_power_F_tag} + @{logos1_power_G_tag} + @{logos1_power_H_tag} + @{logos1_power_I_tag} + @{logos1_power_J_tag} + @{logos1_power_K_tag} - @{logos1_weak_A_tag} - @{logos1_weak_B_tag} - @{logos1_weak_C_tag} - @{logos1_weak_D_tag} + @{mythos1_power_A_tag} + @{mythos1_power_B_tag} + @{mythos1_power_C_tag} + @{mythos1_power_D_tag} + @{mythos1_power_E_tag} + @{mythos1_power_F_tag} + @{mythos1_power_G_tag} + @{mythos1_power_H_tag} + @{mythos1_power_I_tag} + @{mythos1_power_J_tag} + @{mythos1_power_K_tag} - @{mythos1_weak_A_tag} - @{mythos1_weak_B_tag} - @{mythos1_weak_C_tag} - @{mythos1_weak_D_tag} + @{logos2_power_A_tag} + @{logos2_power_B_tag} + @{logos2_power_C_tag} + @{logos2_power_D_tag} + @{logos2_power_E_tag} + @{logos2_power_F_tag} + @{logos2_power_G_tag} + @{logos2_power_H_tag} + @{logos2_power_I_tag} + @{logos2_power_J_tag} + @{logos2_power_K_tag} - @{logos2_weak_A_tag} - @{logos2_weak_B_tag} - @{logos2_weak_C_tag} - @{logos2_weak_D_tag} + @{mythos2_power_A_tag} + @{mythos2_power_B_tag} + @{mythos2_power_C_tag} + @{mythos2_power_D_tag} + @{mythos2_power_E_tag} + @{mythos2_power_F_tag} + @{mythos2_power_G_tag} + @{mythos2_power_H_tag} + @{mythos2_power_I_tag} + @{mythos2_power_J_tag} + @{mythos2_power_K_tag} - @{mythos2_weak_A_tag} - @{mythos2_weak_B_tag} - @{mythos2_weak_C_tag} - @{mythos2_weak_D_tag} + @{logos3_power_A_tag} + @{logos3_power_B_tag} + @{logos3_power_C_tag} + @{logos3_power_D_tag} + @{logos3_power_E_tag} + @{logos3_power_F_tag} + @{logos3_power_G_tag} + @{logos3_power_H_tag} + @{logos3_power_I_tag} + @{logos3_power_J_tag} + @{logos3_power_K_tag} - @{logos3_weak_A_tag} - @{logos3_weak_B_tag} - @{logos3_weak_C_tag} - @{logos3_weak_D_tag} + @{mythos3_power_A_tag} + @{mythos3_power_B_tag} + @{mythos3_power_C_tag} + @{mythos3_power_D_tag} + @{mythos3_power_E_tag} + @{mythos3_power_F_tag} + @{mythos3_power_G_tag} + @{mythos3_power_H_tag} + @{mythos3_power_I_tag} + @{mythos3_power_J_tag} + @{mythos3_power_K_tag} - @{mythos3_weak_A_tag} - @{mythos3_weak_B_tag} - @{mythos3_weak_C_tag} - @{mythos3_weak_D_tag} + @{logos4_power_A_tag} + @{logos4_power_B_tag} + @{logos4_power_C_tag} + @{logos4_power_D_tag} + @{logos4_power_E_tag} + @{logos4_power_F_tag} + @{logos4_power_G_tag} + @{logos4_power_H_tag} + @{logos4_power_I_tag} + @{logos4_power_J_tag} + @{logos4_power_K_tag} - @{logos4_weak_A_tag} - @{logos4_weak_B_tag} - @{logos4_weak_C_tag} - @{logos4_weak_D_tag} + @{mythos4_power_A_tag} + @{mythos4_power_B_tag} + @{mythos4_power_C_tag} + @{mythos4_power_D_tag} + @{mythos4_power_E_tag} + @{mythos4_power_F_tag} + @{mythos4_power_G_tag} + @{mythos4_power_H_tag} + @{mythos4_power_I_tag} + @{mythos4_power_J_tag} + @{mythos4_power_K_tag} - @{mythos4_weak_A_tag} - @{mythos4_weak_B_tag} - @{mythos4_weak_C_tag} - @{mythos4_weak_D_tag} + @{extra1_power_A_tag} + @{extra1_power_B_tag} + @{extra1_power_C_tag} + @{extra1_power_D_tag} + @{extra1_power_E_tag} + @{extra1_power_F_tag} + @{extra1_power_G_tag} + @{extra1_power_H_tag} + @{extra1_power_I_tag} + @{extra1_power_J_tag} + @{extra1_power_K_tag} - @{extra1_weak_A_tag} - @{extra1_weak_B_tag} - @{extra1_weak_C_tag} - @{extra1_weak_D_tag} + @{extra2_power_A_tag} + @{extra2_power_B_tag} + @{extra2_power_C_tag} + @{extra2_power_D_tag} + @{extra2_power_E_tag} + @{extra2_power_F_tag} + @{extra2_power_G_tag} + @{extra2_power_H_tag} + @{extra2_power_I_tag} + @{extra2_power_J_tag} + @{extra2_power_K_tag} - @{extra2_weak_A_tag} - @{extra2_weak_B_tag} - @{extra2_weak_C_tag} - @{extra2_weak_D_tag} + @{extra3_power_A_tag} + @{extra3_power_B_tag} + @{extra3_power_C_tag} + @{extra3_power_D_tag} + @{extra3_power_E_tag} + @{extra3_power_F_tag} + @{extra3_power_G_tag} + @{extra3_power_H_tag} + @{extra3_power_I_tag} + @{extra3_power_J_tag} + @{extra3_power_K_tag} - @{extra3_weak_A_tag} - @{extra3_weak_B_tag} - @{extra3_weak_C_tag} - @{extra3_weak_D_tag} + @{crew_power_A_tag} + @{crew_power_B_tag} + @{crew_power_C_tag} + @{crew_power_D_tag} + @{crew_power_E_tag} + @{crew_power_F_tag} + @{crew_power_G_tag} + @{crew_power_H_tag} + @{crew_power_I_tag} + @{crew_power_J_tag} + @{crew_power_K_tag} - @{crew_weak_A_tag} - @{crew_weak_B_tag} - @{crew_weak_C_tag} - @{crew_weak_D_tag} + @{identity_story_A_tag} + @{identity_story_B_tag} + @{identity_story_C_tag} + @{identity_story_D_tag} + @{identity_story_E_tag} + @{identity_story_F_tag} + @{plusmod} - @{minusmod} + (@{status_1_switch} * @{status_1_tier}) + (@{status_2_switch} * @{status_2_tier}) + (@{status_3_switch} * @{status_3_tier}) + (@{status_4_switch} * @{status_4_tier}) + (@{status_5_switch} * @{status_5_tier}) + (@{status_6_switch} * @{status_6_tier}) + (@{status_7_switch} * @{status_7_tier}) + (@{status_8_switch} * @{status_8_tier}) ]]' disabled>
-                    <input type="number" class="burn_roll_body" name="attr_power_burn" value='[[ 3 + @{plusmod} - @{minusmod} + (@{status_1_switch} * @{status_1_tier}) + (@{status_2_switch} * @{status_2_tier}) + (@{status_3_switch} * @{status_3_tier}) + (@{status_4_switch} * @{status_4_tier}) + (@{status_5_switch} * @{status_5_tier}) + (@{status_6_switch} * @{status_6_tier}) + (@{status_7_switch} * @{status_7_tier}) + (@{status_8_switch} * @{status_8_tier}) ]]' disabled>
+                    <input type="number" class="standard_roll_body" name="attr_power" value='0' >
+                    <input type="number" class="burn_roll_body" name="attr_power_burn" value='3' >
                         <div class="clear_button">
                             <input type="checkbox" class="clear_check" style="width: 100%; height: 100%" name="attr_clear">
                             <label class="label label_small center clear_label">RESET</label>
@@ -10537,8 +10819,8 @@ setAttrs(settings);
 				<input type="text" class="theme_tag_label" placeholder="Player Character" name="attr_identity_crew_A_name">
 			</div>
 			<div class="identity_column">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_A_help" value="0">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_A_hurt" value="0">
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_A_help" value="0" min='0' >
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_A_hurt" value="0" min='0' >
 			</div>
 		</div>
 
@@ -10547,8 +10829,8 @@ setAttrs(settings);
 				<input type="text" class="theme_tag_label" placeholder="Player Character" name="attr_identity_crew_B_name">
 			</div>
 			<div class="identity_column">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_B_help" value="0">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_B_hurt" value="0">
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_B_help" value="0" min='0' >
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_B_hurt" value="0" min='0' >
 			</div>
 		</div>
 
@@ -10557,8 +10839,8 @@ setAttrs(settings);
 				<input type="text" class="theme_tag_label" placeholder="Player Character" name="attr_identity_crew_C_name">
 			</div>
 			<div class="identity_column">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_C_help" value="0">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_C_hurt" value="0">
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_C_help" value="0" min='0' >
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_C_hurt" value="0" min='0' >
 			</div>
 		</div>
 
@@ -10577,8 +10859,8 @@ setAttrs(settings);
 				<input type="text" class="theme_tag_label" placeholder="Player Character" name="attr_identity_crew_E_name">
 			</div>
 			<div class="identity_column">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_E_help" value="0">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_E_hurt" value="0">
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_E_help" value="0" min='0' >
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_E_hurt" value="0" min='0' >
 			</div>
 		</div>
 
@@ -10587,8 +10869,8 @@ setAttrs(settings);
 				<input type="text" class="theme_tag_label" placeholder="Player Character" name="attr_identity_crew_F_name">
 			</div>
 			<div class="identity_column">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_F_help" value="0">
-				<input type="number" class="identity_helphurt" name="attr_identity_crew_F_hurt" value="0">
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_F_help" value="0" min='0' >
+				<input type="number" class="identity_helphurt" name="attr_identity_crew_F_hurt" value="0" min='0' >
 			</div>
 		</div>
 	</div>
@@ -10997,12 +11279,12 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_1_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_1_switch" value="-1" ><span><span>
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_1_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_1_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11100,13 +11382,13 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_2_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_2_switch" value="-1" ><span><span>
 
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_2_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_2_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11204,13 +11486,13 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_3_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_3_switch" value="-1" ><span><span>
 
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_3_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_3_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11308,13 +11590,13 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_4_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_4_switch" value="-1" ><span><span>
 
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_4_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_4_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11412,13 +11694,13 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_5_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_5_switch" value="-1" ><span><span>
 
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_5_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_5_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11516,13 +11798,13 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_6_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_6_switch" value="-1" ><span><span>
 
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_6_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_6_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11620,13 +11902,13 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_7_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_7_switch" value="-1" ><span><span>
 
 	</div>
 
 	<div class="plus_check">
 
-		<input type="checkbox" class="" name="attr_status_7_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_7_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
@@ -11724,11 +12006,11 @@ setAttrs(settings);
 <div class="status_card_footer">
 <div class="line" style="height: 100%">
 	<div class=" minus_check">
-		<input type="checkbox" class="" name="attr_status_8_switch" value="-1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_8_switch" value="-1" ><span><span>
 	</div>
 
 	<div class="plus_check">
-		<input type="checkbox" class="" name="attr_status_8_switch" value="1" ><span></span>
+		<input type="checkbox" class="" name="attr_status_8_switch" value="1" ><span><span>
 	</div>
 </div>
 </div>
